@@ -1,0 +1,19 @@
+@import "/app.wxss";
+
+.complaint_list{padding:30rpx 20rpx;}
+.complaint_list .li{background:#fff; border-radius:10rpx; margin-bottom:30rpx; position:relative; padding-bottom:20rpx;}
+.complaint_list .li .top{height:80rpx; line-height:80rpx; background:#6592fe; padding:0 20rpx; color:#fff; font-size:30rpx; border-top-left-radius: 10rpx; border-top-right-radius: 10rpx;}
+.complaint_list .li .top .ico_time{width:30rpx; height:30rpx; background-position: -90rpx -470rpx; margin-right:10rpx; vertical-align: middle;}
+.complaint_list .li .main{padding:20rpx 20rpx 0;}
+.complaint_list .li .main .title{font-size:32rpx; color:#333; line-height:36rpx; margin-bottom:15rpx; }
+.complaint_list .li .main .title .label{display:inline-block; height:34rpx; line-height:34rpx; padding:0 10rpx; border:1rpx solid #bdbdbd; border-radius:10rpx; background:#fff; color:#aeaeae; font-size:24rpx; margin-right:10rpx; vertical-align:top;}
+.complaint_list .li .main .p{font-size:26rpx; line-height:44rpx; color:#999;}
+.complaint_list .li .main .imgs{margin-top:10rpx;}
+.complaint_list .li .main .imgs .img{width:150rpx; height:150rpx; margin-right:10rpx;}
+.complaint_list .li .feedback{margin:20rpx 20rpx 0; padding:20rpx; background:#f6f5fa; border-radius:10rpx; font-size:26rpx; color:#4c7ebd; line-height:44rpx;}
+.complaint_list .li .feedback .time{color:#9d9d9d; font-size:24rpx; margin-top:10rpx;}
+.complaint_list .li .status{width:97rpx; height:42rpx; line-height:38rpx; background-position:-180rpx 0; font-size:24rpx; color:#fff; text-align: center; position:absolute; right:-5rpx; top:20rpx;}
+.complaint_list .li .s_blue{background-position: -70rpx 0;}
+.complaint_list .li .s_yellow{background-position: -180rpx 0;}
+.complaint_list .li .s_purple{background-position: -280rpx 0;}
+.complaint_list .li .s_gray{background-position: -395rpx 0;}

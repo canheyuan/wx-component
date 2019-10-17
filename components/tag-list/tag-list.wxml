@@ -1,0 +1,31 @@
+<view class='complaint_list' wx:if="{{listInfo.list.length>0 && listInfo.list}}">
+
+    <view 
+        class='li box_shadow' 
+        wx:for="{{listInfo.list}}" wx:key="{{index}}"  
+        bindtap="gotoDetail" data-id="{{item.complaintId}}"
+    >
+        <view class='status icons {{item.statusClass}}'>{{item.status}}</view>
+        <view class='top'><icon class='icons ico_time'></icon>{{langData.public.applyTime}}：{{item.applyTime}}</view>
+        <view class='main'>
+            <view class='title'><text>{{item.title}}</text></view>
+            <view class='p'>{{item.content}}</view>
+            <!-- <view class='imgs clearfix'>
+                <image 
+                class='img'  src='{{img}}'
+                wx:for="{{item.images}}" wx:key="{{index}}" wx:for-item="img" wx:for-index="imgIndex"
+                data-index="{{imgIndex}}" data-imgs="{{item.images}}" bindtap="previewImageFn"
+                ></image>
+            </view> -->
+        </view>
+        <view class='feedback' wx:if="{{item.result}}">
+            <text>{{langData.feedback}}：
+            {{item.result}}</text>
+            <view class='time'>{{item.finishTime}}</view>
+        </view>
+    </view>
+</view>
+
+<!-- 暂无状态 -->
+<list-nothing c-name="complaint" wx:if="{{!listInfo.list.length>0 && listInfo.list}}"></list-nothing>
+

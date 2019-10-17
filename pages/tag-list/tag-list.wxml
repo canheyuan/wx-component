@@ -1,0 +1,20 @@
+
+<!-- 选项卡切换 -->
+<view class='tag_box tag_fixed'>
+    <view class='tag_list'>
+        <view 
+            wx:for="{{tagList}}" wx:key="{{index}}" class='tag_item {{tagIndex==index?"act":""}}' 
+            bindtap='tagChangeFn'  data-index="{{index}}" 
+        >{{item.name}}</view>
+    </view>
+</view>
+
+<!-- 循环报修列表 -->
+<view wx:for="{{tagList}}" wx:key="tagList{{index}}"  hidden="{{tagIndex!=index}}" wx:if="{{item.show}}">
+    <tag-list target-page="tagName" tag-type="{{item.type}}" reach-data="{{item.reach}}"></tag-list>
+</view>
+
+<!-- 
+    注意几点：
+    1、json文件有没有添加下拉在家的属性： "enablePullDownRefresh": true,
+ -->

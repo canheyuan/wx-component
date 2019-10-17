@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "tag-list": "/components/tag-list/tag-list"
+    }
+}

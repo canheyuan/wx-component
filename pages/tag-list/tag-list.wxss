@@ -1,0 +1,12 @@
+
+/* 选项卡切换 */
+.tag_box{height:80rpx;  border-bottom:1rpx solid #dddddd; text-align: center; background:#fff;}
+.tag_box.tag_fixed{position:fixed; top:0; left:0; width:100%; z-index: 1000;}
+.tag_box .tag_list{display: box; display: -webkit-box; margin:0 30rpx;}
+.tag_box .tag_item{box-flex: 1; -webkit-box-flex: 1; width:100%; display:block;  font-size:28rpx; color:#707070; height:80rpx; line-height:80rpx;}
+.tag_box .tag_item.act{color:#333; font-weight: bold; position:relative; font-size:30rpx;}
+.tag_box .tag_item.act::after{content:''; display: inline-block;  height:8rpx; width:60rpx; background:#4b7df6; position:absolute; left:50%; bottom:0; margin-left:-30rpx;}
+
+.tag_box2{height:80rpx; text-align: center; background:#fff;overflow: hidden; border-radius:40rpx;}
+.tag_box2 .tag_item{display:inline-block; width:50%; height:80rpx; line-height:80rpx; border-radius:40rpx; font-size:32rpx;}
+.tag_box2 .tag_item.act{background:#4a7df6; color:#fff;}
