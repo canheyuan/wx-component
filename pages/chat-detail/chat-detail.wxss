@@ -1,0 +1,93 @@
+
+page {  background-color: #EFEFEF;}
+.scroll_view{width: 100%;display: flex; flex-direction: column; margin-top: 54rpx; position:relative;}
+.scroll_view .top_load{height:40rpx;  text-align: center; position:absolute; top:0; left:0; width:100%; padding:10rpx 0;}
+.scroll_view .load_img{width:40rpx; height:40rpx; display:inline-block;}
+.message_list{padding:40rpx 20rpx;}
+.message_list .li{margin-bottom:30rpx; overflow: hidden;}
+.message_list .li .time{text-align: center; display:block; height:40rpx; margin:40rpx auto; font-size:0;}
+.message_list .li .time text{display:inline-block; height:40rpx; line-height:40rpx; background:#cccccc; border-radius:6rpx; color:#fff; font-size:24rpx; padding:0 15rpx;}
+
+.message_list .li .per{width:60rpx; height:60rpx; float:left; border-radius:10rpx;}
+.message_list .li .info{overflow:hidden; padding-left:15rpx;}
+.message_list .li .info .load{width:40rpx; height:40rpx; vertical-align: middle; position:relative;
+animation: rotateLoad 1s linear 0s infinite normal;}
+.message_list .li .info .msg_text{font-size:28rpx; color:#333; background:#8fcbf7; padding:10rpx 20rpx; line-height:40rpx; border-radius:10rpx; max-width:65%; text-align: left; float:left;position:relative;}
+.message_list .li .info .msg_text::after{
+    content:''; width:0; height:0; overflow:hidden; font-size:0; display:inline-block; 
+    border-style:solid; 
+    border-width:10rpx 12rpx 10rpx 0; 
+    border-color:transparent #8fcbf7 transparent transparent; 
+    position:absolute; left:-10rpx; top:20rpx;
+}
+.message_list .li .info .msg_img{width:100%; max-width:50%;  display:inline-block;}
+
+.message_list .li.user_from .per{float:right;}
+.message_list .li.user_from .info {text-align: right; padding-left:0; padding-right:15rpx;}
+.message_list .li.user_from .info .msg_text{float:right;}
+.message_list .li.user_from .info .msg_text::after{ border-width:10rpx 0 10rpx 12rpx; border-color:transparent transparent transparent #8fcbf7; left:inherit; right:-10rpx; }
+
+.chat-input-style{border-radius:10rpx;border:1rpx solid gainsboro;margin-top:14rpx; margin-bottom: 13rpx; padding:10rpx; min-height: 51rpx;background-color: #EFEFEF; font-size:28rpx; color:#666;}
+.send_btn{display:inline-block; width:100rpx; margin:0 10rpx; height:70rpx; line-height:70rpx; color:#fff; background:#3cb371; border-radius:10rpx; text-align: center; font-size:28rpx; }
+
+@-webkit-keyframes rotateLoad {
+0% {-webkit-transform:rotate(0); }
+100% {-webkit-transform:rotate(360deg);}
+}
+@keyframes rotateLoad {
+0% {transform:rotate(0);}
+100% {transform:rotate(360deg);}
+}
+
+.more_tip{margin:0;}
+.more_tip .txt{font-size:22rpx;}
+
+.chat-page-status-style{
+    width: 100%;
+    height: 54rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26rpx;
+    color: white;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 20;
+}
+
+input{
+    padding-top: 10rpx;
+    padding-bottom:10rpx;
+    width: 100%;
+}
+
+.extra-btn-style{
+    width: 50rpx;
+    height: 50rpx;
+    padding:25rpx 15rpx;
+    display: flex;
+    flex-shrink:0;
+}
+.input-text-voice-super{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    height:100rpx;
+}
+.input-flex-column{
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.list-divide-line {
+    width: 100%;
+    height: 1rpx;
+    background-color: #dddddd;
+}

@@ -2,7 +2,9 @@
     "pages": [
         "pages/tag-list/tag-list",
         "pages/index/index",
-        "pages/logs/logs"
+        "pages/logs/logs",
+        "pages/chat-detail/chat-detail",
+        "pages/chat-list/chat-list"
     ],
     "window": {
         "backgroundTextStyle": "light",

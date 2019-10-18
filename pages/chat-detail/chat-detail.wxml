@@ -1,0 +1,79 @@
+
+<!-- 顶部状态 -->
+<view style="background-color:#40c9ff;" class="chat-page-status-style">
+    {{langData.chating}}
+</view>
+
+<scroll-view
+    class="scroll_view"
+  style="height:{{scrollHeight}}px;"
+  scroll-y="true"
+  scroll-top="{{scrollTopVal}}"
+  bindscrolltoupper="scrolltopFn"
+>
+    <view class="top_load" hidden="{{topLoadHide}}">
+        <image class="load_img" src="{{domainUrl}}/images/chat/msg_load.png"></image>
+    </view>
+    <view class="more_tip" wx:if="{{isNoMoreMsg}}"><text class="txt">{{langData.loadAll}}</text></view>
+    <view class="message_list">
+
+        <view class="li {{item.isMy?'user_from':'user_to'}}" wx:for="{{chatItems}}" wx:key="chatItems{{index}}">
+            <view class="time" wx:if="{{item.time && item.timeIsShow}}"><text>{{item.time}}</text></view>
+            <image class="per" src="{{item.headUrl}}"></image>
+            <view class="info">
+                <image 
+                    wx:if="{{item.sendStatus=='loading'}}" class="load" 
+                    src="{{domainUrl}}/images/chat/msg_load.png"
+                ></image>
+                <image 
+                    wx:if="{{item.sendStatus=='fail'}}" class="load" 
+                    src="{{domainUrl}}/images/chat/send_fail.png"
+                ></image>
+                <view class="msg_text" wx:if="{{item.type=='text'}}">{{item.content}}</view>
+                <image 
+                class="msg_img" wx:if="{{item.type=='image'}}" 
+                src="{{item.content}}" mode="widthFix"
+                bindtap="previewImgFn" data-img='{{item.content}}'
+                ></image>
+            </view>
+        </view>
+
+    </view>
+
+</scroll-view>
+
+<view class="input-flex-column" catchtap="">
+    <view class="input-text-voice-super">
+
+        <input 
+            class="chat-input-style" style="margin-left:20rpx;"
+            maxlength="500" value="{{textMessage}}" 
+            confirm-type="send" 
+            bindconfirm="sendTextBtn" 
+            bindfocus="inputFocusFn" 
+            bindblur="inputBlurFn" 
+            bindinput="inputChangeFn"
+        />
+        <view hover-class="press-style-opacity">
+            <view wx:if="{{inputFocus}}" class="send_btn" bindtap="sendTextBtn" data-value="{{textMessage}}">{{langData.sendBtn}}</view>
+            <image wx:if="{{!inputFocus}}" class="extra-btn-style" src="{{domainUrl}}/images/chat/extra.png" catchtap="chooseImgFn" />
+        </view>
+
+        </view>
+        
+        <block wx:if="{{false}}" >
+        <view class="list-divide-line" />
+        <view  class="extra-super" >
+
+            <view class="flex-column" style="width: 25%">
+                <image class="extra-image-size" src="../../../images/chat/extra/choose_picture.png" />
+                <text class="extra-text-size">图片</text>
+            </view>
+            <view class="flex-column" style="width: 25%">
+                <image class="extra-image-size" src="../../../images/chat/extra/take_photos.png" />
+                <text class="extra-text-size">拍照</text>
+            </view>
+        </view>
+        </block>
+</view>
+

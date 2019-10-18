@@ -1,0 +1,23 @@
+
+<!-- 用户 -->
+<view class='usermsg_box'>
+    <view 
+        class='msg_box clearfix' 
+        wx:for="{{contactList}}" wx:key="{{index}}" 
+        data-userId="{{item.To_Account}}" bindtap="gotoChat" data-item="{{item}}"
+    >
+        <view class='user_head'>
+            <image src='{{item.C2cImage?item.C2cImage:domainUrl+"/images/default/df_userhead.png"}}'></image>
+        </view>    
+        <view class='div_top'>
+            <view class='info_1'>
+                <text class='title'>{{item.C2cNick}}</text>
+                <text class='time'>{{item.MsgTimeStamp}}</text>
+            </view>
+            <view class='info_2'>
+                <view class='red' wx:if="{{item.unread}}">{{item.unread}}</view>
+                <text class='txt'>{{item.MsgShow}}</text>
+            </view>
+        </view>
+    </view>
+</view>

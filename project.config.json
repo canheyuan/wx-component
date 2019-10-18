@@ -4,17 +4,25 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.3",
-	"appid": "wx9461f750f268506e",
+	"appid": "wx3796a1ffecc1e11e",
 	"projectname": "%E5%9B%AD%E5%8F%AE%E9%80%9A%E7%94%A8%E7%BB%84%E4%BB%B6",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -31,13 +39,28 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/chat-list/chat-list",
+					"pathName": "pages/chat-list/chat-list",
+					"scene": null
+				}
+			]
 		}
 	}
 }
