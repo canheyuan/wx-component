@@ -4,7 +4,7 @@
   "description": "yuanding  ",
   "main": "app.js",
   "dependencies": {
-    "cos-wx-sdk-v5": "^0.7.7",
+    "cos-wx-sdk-v5": "^1.4.3",
     "tim-wx-sdk": "^2.1.0"
   },
   "devDependencies": {},
